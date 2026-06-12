@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Diseño Verde - Paisajismo y Mantenimiento Profesional</title>
+  <link rel="icon" type="image/svg+xml" href="./images/hoja.svg">
+  <link rel="stylesheet" href="dist/output.css">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  
+  <!-- Tabler Icons para un look minimalista y botánico -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body class="smooth-scroll antialiased min-h-screen flex flex-col">
+
+  <!-- Splash Screen -->
+  <div id="splash-screen" style="position: fixed; inset: 0; background-color: #ffffff; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease, visibility 0.5s ease;">
+    <img id="splash-logo" src="./images/hoja.svg" alt="Logo Animado" style="width: 120px; height: 120px; max-width: 120px; max-height: 120px; object-fit: contain; transform: scale(0.5) rotate(-10deg); opacity: 0; transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1), opacity 1s ease;">
+  </div>
+
+  <!-- TopNavBar -->
+  <header id="main-header" style="transform: translateY(-100%); opacity: 0;" class="custom-header fixed top-0 w-full z-50">
+    <div class="flex justify-between items-center px-container-padding-mobile md:px-container-padding-desktop py-4 max-w-7xl mx-auto">
+      <div class="flex items-center gap-4">
+        <img alt="Diseño Verde Logo" class="custom-logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxuuD-imK0Q2TACbgRbErBzOaXfSjpyjeEcH_5dUmTbzWIxQUtIA-_PGKHveWZWo9j8ZP9_aDeGyaD50hA2OYJD68FMroMwxPXpWnMF8qEiZ25M4zj3-ur0k1sGtQ4PST8jYA4OiLpLjbBzVCBoIQ19zspXhtKdiBlkr72zMOpnsGEA4mkH9_X40z9rvG46OKbBwK3kyNBlt5jAXF4A_Lj6v2za9FguILXHSujLhkeLko8HVYBbcniGsTZzUAQxo33cVmKXc1lCGY">
+      </div>
+      <nav class="hidden md:flex gap-8 items-center">
+        <a class="custom-nav-link active-link" href="#inicio">Inicio</a>
+        <a class="custom-nav-link" href="#servicios">Servicios</a>
+        <a class="custom-nav-link" href="#galeria">Galería</a>
+        <a class="custom-nav-link" href="#contacto">Contacto</a>
+      </nav>
+      <div class="hidden md:block">
+        <a class="custom-cta-btn" href="#contacto">
+          Presupuesto
+        </a>
+      </div>
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden custom-menu-btn p-2">
+        <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0;">menu</span>
+      </button>
+    </div>
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full custom-mobile-menu py-6 px-container-padding-mobile flex flex-col gap-4 shadow-lg">
+      <a class="custom-nav-link" href="#inicio">Inicio</a>
+      <a class="custom-nav-link" href="#servicios">Servicios</a>
+      <a class="custom-nav-link" href="#galeria">Galería</a>
+      <a class="custom-nav-link" href="#contacto">Contacto</a>
+      <a class="custom-cta-btn w-52 mx-auto mt-2" href="#contacto">
+        Presupuesto
+      </a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="custom-hero overflow-hidden" id="inicio">
+      <div class="absolute inset-0 z-0">
+        <video id="hero-video" class="w-full h-full object-cover" autoplay loop muted playsinline>
+          <source src="./video/hero_video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div id="tsparticles" class="absolute inset-0 z-[2] pointer-events-none"></div>
+      </div>
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-container-padding-mobile md:px-container-padding-desktop">
+        <div class="custom-hero-content">
+          <span class="hero-element custom-hero-badge" style="opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease;">
+            Procesos sostenibles
+          </span>
+          <h1 class="hero-element custom-hero-title leading-tight" style="opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease;">
+            Ingeniería ambiental<div>y paisajismo</div>
+          </h1>
+          <p class="hero-element custom-hero-subtitle" style="opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease;">
+            Conservación integral de áreas verdes con excelencia sostenible
+          </p>
+          <div class="pt-4 hero-element" style="opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease;">
+            <a class="custom-hero-cta" href="#contacto">
+              Presupuesto&nbsp;<span class="material-symbols-outlined ml-2" style="font-variation-settings: &quot;FILL&quot; 0;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Scroll Indicator Animado -->
+      <div class="scroll-indicator">
+        <div class="scroll-indicator-line"></div>
+      </div>
+    </section>
+
+    <!-- Divider: Hero -> Servicios -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f5f0e8"/>
+      </svg>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services-section" id="servicios">
+      <div class="max-w-7xl mx-auto px-container-padding-mobile md:px-container-padding-desktop">
+        <div class="text-center mb-16 reveal-up">
+          <h2 class="services-title mb-4">Nuestros Servicios</h2>
+          <p class="services-subtitle max-w-2xl mx-auto">Soluciones integrales para hacer realidad y mantener la vitalidad de sus espacios exteriores.</p>
+        </div>
+        <div class="services-grid">
+          <!-- Service Card 1 (Main Card - 55% width) -->
+          <div class="service-card service-card-main reveal-up">
+            <span class="service-card-number">01</span>
+            <div>
+              <div class="service-card-icon">
+                <i class="ti ti-leaf"></i>
+              </div>
+              <h3 class="mb-4">Diseño de Jardines</h3>
+              <p>Creamos proyectos paisajísticos personalizados que armonizan con la arquitectura de su hogar y el entorno local.</p>
+            </div>
+            <a class="service-card-link" href="#contacto">
+              Conocer más
+              <span class="material-symbols-outlined ml-1 text-sm" style="font-variation-settings: &quot;FILL&quot; 0;">chevron_right</span>
+            </a>
+          </div>
+          <!-- Service Card 2 (Secondary Card 1 - 45% width, stacked) -->
+          <div class="service-card service-card-sub service-card-sub1 reveal-up" style="--delay: 150ms;">
+            <span class="service-card-number">02</span>
+            <div>
+              <div class="service-card-icon">
+                <i class="ti ti-ripple"></i>
+              </div>
+              <h3 class="mb-4">Mantenimiento de Áreas Verdes</h3>
+              <p>Programas de cuidado continuo, poda profesional y fertilización para mantener su jardín impecable todo el año.</p>
+            </div>
+            <a class="service-card-link" href="#contacto">
+              Conocer más
+              <span class="material-symbols-outlined ml-1 text-sm" style="font-variation-settings: &quot;FILL&quot; 0;">chevron_right</span>
+            </a>
+          </div>
+          <!-- Service Card 3 (Secondary Card 2 - 45% width, stacked) -->
+          <div class="service-card service-card-sub service-card-sub2 reveal-up" style="--delay: 300ms;">
+            <span class="service-card-number">03</span>
+            <div>
+              <div class="service-card-icon">
+                <i class="ti ti-droplet"></i>
+              </div>
+              <h3 class="mb-4">Instalación de Riego</h3>
+              <p>Sistemas de riego inteligente y eficiente que optimizan el consumo de agua asegurando la hidratación perfecta.</p>
+            </div>
+            <a class="service-card-link" href="#contacto">
+              Conocer más
+              <span class="material-symbols-outlined ml-1 text-sm" style="font-variation-settings: &quot;FILL&quot; 0;">chevron_right</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider: Servicios -> About -->
+    <div class="section-divider inverted">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#1a2e1a"/>
+      </svg>
+    </div>
+
+    <!-- About Section (Pasión por el verde) -->
+    <section class="about-section" id="galeria">
+      <div class="about-container">
+        <!-- Text Column -->
+        <div class="about-text-side reveal-left">
+          <h2 class="about-title">Pasión por el verde</h2>
+          <p class="about-text">
+            En Diseño Verde, nuestra filosofía nace de la conexión profunda con la naturaleza. Llevamos más de una década transformando espacios vacíos en ecosistemas vivos y vibrantes. Creemos que cada jardín tiene el potencial de ser un santuario personal.
+          </p>
+          <p class="about-text">
+            Nuestro equipo de paisajistas y botánicos trabaja con especies nativas y prácticas sostenibles, asegurando que su diseño no solo sea estéticamente impresionante hoy, sino que prospere y madure bellamente con el paso del tiempo.
+          </p>
+          <!-- Stats Horizontales -->
+          <div class="stats-container reveal-scale">
+            <div class="stat-item">
+              <span class="stat-number">+10 años</span>
+              <div class="stat-divider"></div>
+              <span class="stat-label">Experiencia</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <div class="stat-divider"></div>
+              <span class="stat-label">Proyectos</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <div class="stat-divider"></div>
+              <span class="stat-label">Sostenible</span>
+            </div>
+          </div>
+          <div>
+            <a class="about-btn" href="#contacto">
+              Ver nuestra historia en imágenes
+              <span class="material-symbols-outlined ml-2" style="font-variation-settings: &quot;FILL&quot; 0;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+        <!-- Image Column -->
+        <div class="about-image-side reveal-right">
+          <img alt="Manos cuidando una planta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzpe8cHtna-x3wItFwlqg_j_daQbmJbkwzejortxohidxS6i-1VdxQhzeI0e1KEfpsM5phGQNXfeMqT-LKA8JUTVopaUGklXUSiKCQvIRyHbo8cE8F6PMj2x7X-N6uFaeNR4-RuuHrB_R-ZP5-AHU4JfZRmlwzIpwZ14q1KqO_LC9O0QrlraXY94q0NMW0HGfpzU1RFZotHnznwABg14lR4KDxMqHUhPppp4HtN00houLcr0g8ZakDv0il3Q__OvMlGv65yTk0POQ">
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider: About -> Contacto -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f5f0e8"/>
+      </svg>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+      <div class="contact-grid px-container-padding-mobile md:px-0 max-w-7xl">
+        <!-- Form Column -->
+        <div class="contact-form-side reveal-right">
+          <div class="text-center mb-10">
+            <h2 class="about-title mb-4">Comience su proyecto</h2>
+            <p class="about-text">Complete el formulario y nos comunicaremos a la brevedad para agendar una visita técnica gratuita.</p>
+          </div>
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="lg:order-2 floating-group reveal-up" style="--delay: 100ms;">
+                <input class="floating-input" placeholder=" " type="text" id="nombre_input" required>
+                <label class="floating-label" for="nombre_input">Nombre completo</label>
+              </div>
+              <div class="lg:order-1 floating-group reveal-up" style="--delay: 200ms;">
+                <input class="floating-input" placeholder=" " type="tel" id="telefono_input">
+                <label class="floating-label" for="telefono_input">Teléfono</label>
+              </div>
+            </div>
+            <div class="floating-group reveal-up" style="--delay: 300ms;">
+              <input class="floating-input" placeholder=" " type="email" id="email_input" required>
+              <label class="floating-label" for="email_input">Correo electrónico</label>
+            </div>
+            <div class="floating-group reveal-up" style="--delay: 400ms;">
+              <select class="floating-select" id="servicio_select" required>
+                <option value="" disabled selected hidden></option>
+                <option>Diseño de Jardines</option>
+                <option>Mantenimiento de Áreas Verdes</option>
+                <option>Instalación de Riego</option>
+                <option>Consulta General</option>
+              </select>
+              <label class="floating-label" for="servicio_select">Servicio de interés</label>
+            </div>
+            <div class="floating-group reveal-up" style="--delay: 500ms;">
+              <textarea class="floating-input resize-none" placeholder=" " rows="4" id="detalles_textarea"></textarea>
+              <label class="floating-label" for="detalles_textarea">Detalles del proyecto</label>
+            </div>
+            <button class="contact-submit-btn" type="submit">
+              Solicitar Presupuesto
+            </button>
+          </form>
+        </div>
+        <!-- Image Column -->
+        <div class="contact-image-side reveal-left">
+          <img alt="Diseñador de paisajes profesional trabajando" src="./images/contact_section_img.jpg">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Divider: Contacto -> Footer -->
+  <div class="section-divider inverted">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#1a2e1a"/>
+    </svg>
+  </div>
+
+  <!-- Footer -->
+  <footer class="custom-footer w-full">
+    <div class="flex flex-col md:flex-row justify-between items-center px-container-padding-mobile md:px-container-padding-desktop gap-gutter max-w-7xl mx-auto w-full">
+      <div class="mb-8 md:mb-0 text-center md:text-left">
+        <span class="block mb-4">
+          <img alt="Diseño Verde Logo" class="h-12 w-auto object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqdwompwL-FwXNHa1d9MJeTEk9L6nIdF28-hhPohinnRnrUw832rQjKPfrfy6O0mm3IS88pKm0EUCVSHfdtoNNcYsoJG8FDcP1qgW97fUwrita8LzmFIvM36dHbIi8sIznI5ksbNiaFjfIFFjm89nBwJOBs-FcntGV4i5Mj4m0YTsUEqkQHGGiTWcwlsfwyARoDg_B_FkTErl5L8QHOJcCTlHDopcdSbrP8-SK6_4OVRJHcl3ugPhR-aeCJt6PDs9iWOPyeDNJ9x0">
+        </span>
+        <p>
+          © 2026 Diseño Verde. <br>Paisajismo y Mantenimiento Profesional.
+        </p>
+      </div>
+      <nav class="flex flex-wrap justify-center gap-6 md:gap-8">
+        <a href="#inicio">Privacidad</a>
+        <a href="#inicio">Términos</a>
+        <a href="#inicio">Preguntas Frecuentes</a>
+        <a href="#inicio">Sostenibilidad</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script src="./src/animations.js"></script>
+</body>
+</html>
