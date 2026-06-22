@@ -1,0 +1,380 @@
+<!-- ============================================
+     DISEÑO VERDE - SECCIÓN SERVICIOS
+     Pegar en módulo HTML de Elementor
+     ============================================ -->
+
+<style>
+/* === SERVICIOS SECTION === */
+.dv-services-section {
+  background-color: var(--dv-color-light, #f5f0e8) !important;
+  color: var(--dv-color-text-dark, #1a2e1a) !important;
+  padding: 100px 0 !important;
+}
+
+.dv-services-inner {
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+@media (min-width: 768px) {
+  .dv-services-inner {
+    padding: 0 80px !important;
+  }
+}
+
+.dv-services-header {
+  text-align: center !important;
+  margin-bottom: 4rem !important;
+}
+
+.dv-services-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 48px !important;
+  font-weight: 400 !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+  margin-bottom: 16px !important;
+}
+
+.dv-services-subtitle {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 1.75 !important;
+  color: var(--dv-color-text-muted, #6b7c6b) !important;
+  max-width: 42rem !important;
+  margin: 0 auto !important;
+}
+
+/* Grid de servicios */
+.dv-services-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 24px !important;
+}
+
+@media (min-width: 1024px) {
+  .dv-services-grid {
+    grid-template-columns: 55fr 45fr !important;
+    align-items: stretch !important;
+  }
+  .dv-services-grid .dv-service-card-main {
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+  }
+  .dv-services-grid .dv-service-card-sub1 {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+  .dv-services-grid .dv-service-card-sub2 {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+  }
+}
+
+/* Service card base */
+.dv-service-card {
+  position: relative !important;
+  border-radius: 24px !important;
+  padding: 3rem 2.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  overflow: hidden !important;
+  transition: all 300ms ease !important;
+  min-height: 280px !important;
+}
+
+.dv-service-card-icon {
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 24px !important;
+  margin-bottom: 2rem !important;
+  transition: transform 300ms ease !important;
+}
+
+.dv-service-card:hover .dv-service-card-icon {
+  transform: scale(1.1) !important;
+}
+
+.dv-service-card-number {
+  position: absolute !important;
+  bottom: -20px !important;
+  right: 10px !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 180px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+/* Main card (dark) */
+.dv-service-card-main {
+  background-color: var(--dv-color-dark, #1a2e1a) !important;
+  color: var(--dv-color-white, #fff) !important;
+  border: none !important;
+}
+
+.dv-service-card-main .dv-service-card-icon {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+}
+
+.dv-service-card-main .dv-service-card-number {
+  color: var(--dv-color-white, #fff) !important;
+  opacity: 0.06 !important;
+}
+
+.dv-service-card-main h3 {
+  color: var(--dv-color-white, #fff) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  margin-bottom: 16px !important;
+}
+
+.dv-service-card-main p {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 1.75 !important;
+}
+
+.dv-service-card-main:hover {
+  border-left: 3px solid var(--dv-color-accent, #c7d580) !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+/* Background Image for Main Card */
+.dv-service-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  overflow: hidden !important;
+  border-radius: inherit !important;
+}
+
+.dv-service-bg img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.dv-service-card-main:hover .dv-service-bg img {
+  transform: scale(1.08) !important;
+}
+
+.dv-service-bg::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 46, 26, 1) 0%,
+    rgba(26, 46, 26, 0.85) 40%,
+    rgba(26, 46, 26, 0.4) 100%
+  ) !important;
+}
+
+/* Elevate content above background */
+.dv-service-card-main > * {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.dv-service-card-main > .dv-service-bg {
+  z-index: 0 !important;
+  position: absolute !important;
+}
+
+/* Sub cards (white) */
+.dv-service-card-sub {
+  background-color: var(--dv-color-white, #fff) !important;
+  color: var(--dv-color-text-dark, #1a2e1a) !important;
+  border: 0.5px solid rgba(26, 46, 26, 0.12) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02) !important;
+}
+
+.dv-service-card-sub .dv-service-card-icon {
+  background-color: var(--dv-color-light, #f5f0e8) !important;
+  color: var(--dv-color-mid, #2d4a2d) !important;
+}
+
+.dv-service-card-sub .dv-service-card-number {
+  color: var(--dv-color-dark, #1a2e1a) !important;
+  opacity: 0.04 !important;
+}
+
+.dv-service-card-sub h3 {
+  color: var(--dv-color-dark, #1a2e1a) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  transition: color 250ms ease !important;
+  margin-bottom: 16px !important;
+}
+
+.dv-service-card-sub p {
+  color: var(--dv-color-text-muted, #6b7c6b) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 1.75 !important;
+  transition: color 250ms ease !important;
+}
+
+/* Sub cards hover (transition to dark) */
+.dv-service-card-sub:hover {
+  background-color: var(--dv-color-dark, #1a2e1a) !important;
+  color: var(--dv-color-white, #fff) !important;
+  border-color: transparent !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+.dv-service-card-sub:hover h3 {
+  color: var(--dv-color-white, #fff) !important;
+}
+
+.dv-service-card-sub:hover p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.dv-service-card-sub:hover .dv-service-card-icon {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+}
+
+.dv-service-card-sub:hover .dv-service-card-number {
+  color: var(--dv-color-white, #fff) !important;
+  opacity: 0.06 !important;
+}
+
+/* Card links */
+.dv-service-card-link {
+  border: 1px solid var(--dv-color-mid, #2d4a2d) !important;
+  color: var(--dv-color-mid, #2d4a2d) !important;
+  padding: 8px 20px !important;
+  border-radius: 999px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  transition: all 250ms ease !important;
+  margin-top: 1.5rem !important;
+  align-self: flex-start !important;
+  text-decoration: none !important;
+}
+
+.dv-service-card-main .dv-service-card-link {
+  border-color: var(--dv-color-accent, #c8a96e) !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+}
+
+.dv-service-card-main .dv-service-card-link:hover {
+  background-color: var(--dv-color-accent, #c8a96e) !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+}
+
+.dv-service-card-sub .dv-service-card-link {
+  border-color: rgba(45, 74, 45, 0.3) !important;
+  color: var(--dv-color-mid, #2d4a2d) !important;
+}
+
+.dv-service-card-sub:hover .dv-service-card-link {
+  border-color: var(--dv-color-accent, #c8a96e) !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+}
+
+.dv-service-card-sub:hover .dv-service-card-link:hover {
+  background-color: var(--dv-color-accent, #c8a96e) !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+}
+</style>
+
+<div class="dv-wrapper">
+  <section class="dv-services-section" id="servicios">
+    <div class="dv-services-inner">
+      <div class="dv-services-header dv-reveal-up">
+        <h2 class="dv-services-title">Nuestros Servicios</h2>
+        <p class="dv-services-subtitle">Soluciones integrales para hacer realidad y mantener la vitalidad de sus espacios exteriores.</p>
+      </div>
+      <div class="dv-services-grid">
+        <!-- Service Card 1 (Main Card - 55% width) -->
+        <div class="dv-service-card dv-service-card-main dv-reveal-up">
+          <!-- Background Image -->
+          <div class="dv-service-bg">
+            <img src="./images/img_servicios_dv.jpg" alt="Servicios Diseño Verde">
+          </div>
+          
+          <span class="dv-service-card-number">01</span>
+          <div>
+            <div class="dv-service-card-icon">
+              <i class="ti ti-leaf"></i>
+            </div>
+            <h3>Transformamos tus residuos en valor</h3>
+            <p>Convertimos restos de poda en compost útil para revitalizar el suelo, reducir gastos y mejorar la salud de tus áreas verdes. Tú ahorras y tu entorno se ve mejor.</p>
+          </div>
+          <a class="dv-service-card-link" href="#contacto">
+            Conocer más
+            <span class="material-symbols-outlined" style="margin-left: 4px; font-size: 14px; font-variation-settings: 'FILL' 0;">chevron_right</span>
+          </a>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="dv-service-card dv-service-card-sub dv-service-card-sub1 dv-reveal-up" style="--delay: 150ms;">
+          <span class="dv-service-card-number">02</span>
+          <div>
+            <div class="dv-service-card-icon">
+              <i class="ti ti-ripple"></i>
+            </div>
+            <h3>Menos agua, mejores áreas verdes</h3>
+            <p>Diseñamos y ajustamos sistemas de riego para maximizar eficiencia hídrica y energética. Menos desperdicio, menor costo operativo y jardines que lucen siempre impecables.</p>
+          </div>
+          <a class="dv-service-card-link" href="#contacto">
+            Conocer más
+            <span class="material-symbols-outlined" style="margin-left: 4px; font-size: 14px; font-variation-settings: 'FILL' 0;">chevron_right</span>
+          </a>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="dv-service-card dv-service-card-sub dv-service-card-sub2 dv-reveal-up" style="--delay: 300ms;">
+          <span class="dv-service-card-number">03</span>
+          <div>
+            <div class="dv-service-card-icon">
+              <i class="ti ti-droplet"></i>
+            </div>
+            <h3>Tu arbolado sano, seguro y lleno de vida</h3>
+            <p>Realizamos podas responsables que fortalecen los árboles, mejoran la estética del entorno y favorecen la biodiversidad. Recuperamos espacios deteriorados y elevamos su valor paisajístico desde el primer mes.</p>
+          </div>
+          <a class="dv-service-card-link" href="#contacto">
+            Conocer más
+            <span class="material-symbols-outlined" style="margin-left: 4px; font-size: 14px; font-variation-settings: 'FILL' 0;">chevron_right</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: Servicios -> About -->
+  <div class="dv-section-divider dv-inverted">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#1a2e1a"/>
+    </svg>
+  </div>
+</div>
+
+<script>
+(function() {
+  if (typeof window.dvInitReveals === 'function') {
+    window.dvInitReveals();
+  }
+})();
+</script>

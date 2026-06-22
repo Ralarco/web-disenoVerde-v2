@@ -1,0 +1,195 @@
+<!-- ============================================
+     DISEÑO VERDE - INVITACIÓN POLÍTICA DE CALIDAD
+     Pegar en módulo HTML de Elementor
+     (Ubicación sugerida: entre 02_hero y 03_servicios)
+     ============================================ -->
+
+<style>
+/* === SGI INVITATION SECTION === */
+.dv-sgi-invitation {
+  background-color: var(--dv-color-light, #f5f0e8) !important;
+  padding: 60px 0 20px !important; /* Spacing after the hero divider */
+}
+
+.dv-sgi-container {
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+@media (min-width: 768px) {
+  .dv-sgi-container {
+    padding: 0 80px !important;
+  }
+}
+
+.dv-sgi-card {
+  background-color: var(--dv-color-white, #fff) !important;
+  border-radius: 24px !important;
+  padding: 3rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem !important;
+  box-shadow: 0 10px 40px rgba(26, 46, 26, 0.04) !important;
+  border: 1px solid rgba(26, 46, 26, 0.06) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 5 !important;
+}
+
+@media (min-width: 1024px) {
+  .dv-sgi-card {
+    flex-direction: row !important;
+    align-items: center !important;
+    padding: 4rem 5rem !important;
+  }
+}
+
+.dv-sgi-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 6px !important;
+  height: 100% !important;
+  background: linear-gradient(to bottom, var(--dv-color-accent, #c8a96e), var(--dv-color-mid, #2d4a2d)) !important;
+  border-radius: 24px 0 0 24px !important;
+}
+
+.dv-sgi-content {
+  flex: 1 !important;
+}
+
+.dv-sgi-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background-color: rgba(200, 169, 110, 0.1) !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.dv-sgi-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 36px !important;
+  font-weight: 400 !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.15 !important;
+}
+
+.dv-sgi-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 1.75 !important;
+  color: var(--dv-color-text-muted, #6b7c6b) !important;
+  max-width: 600px !important;
+}
+
+.dv-sgi-action {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+  align-items: flex-start !important;
+}
+
+@media (min-width: 1024px) {
+  .dv-sgi-action {
+    align-items: flex-end !important;
+    text-align: right !important;
+    min-width: 250px !important;
+  }
+}
+
+.dv-sgi-norms {
+  display: flex !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+}
+
+.dv-sgi-norm {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: var(--dv-color-mid, #2d4a2d) !important;
+  background-color: var(--dv-color-light, #f5f0e8) !important;
+  padding: 6px 14px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(26, 46, 26, 0.05) !important;
+}
+
+.dv-sgi-btn {
+  background-color: var(--dv-color-dark, #1a2e1a) !important;
+  color: var(--dv-color-white, #fff) !important;
+  border: none !important;
+  padding: 14px 32px !important;
+  border-radius: 999px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 300ms ease !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+.dv-sgi-btn:hover {
+  background-color: var(--dv-color-accent, #c8a96e) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+</style>
+
+<div class="dv-wrapper">
+  <section class="dv-sgi-invitation">
+    <div class="dv-sgi-container">
+      <div class="dv-sgi-card dv-reveal-up">
+        <div class="dv-sgi-content">
+          <span class="dv-sgi-badge">
+            <span class="material-symbols-outlined" style="font-size: 16px; font-variation-settings: 'FILL' 0;">verified_user</span>
+            Sistema de Gestión Integrado
+          </span>
+          <h2 class="dv-sgi-title">Nuestro Compromiso con la Excelencia</h2>
+          <p class="dv-sgi-text">
+            En Diseño Verde nos regimos por los más altos estándares internacionales. Conozca nuestra Política de Calidad Integrada, que guía nuestro compromiso con el servicio, el medio ambiente y la eficiencia energética.
+          </p>
+        </div>
+        <div class="dv-sgi-action">
+          <div class="dv-sgi-norms">
+            <span class="dv-sgi-norm"><span class="material-symbols-outlined" style="font-size: 16px;">verified</span> ISO 9001</span>
+            <span class="dv-sgi-norm"><span class="material-symbols-outlined" style="font-size: 16px;">eco</span> ISO 14001</span>
+            <span class="dv-sgi-norm"><span class="material-symbols-outlined" style="font-size: 16px;">bolt</span> ISO 50001</span>
+          </div>
+          <!-- ACTUALIZAR: Asegúrate de que href apunte a la página correcta -->
+          <a class="dv-sgi-btn" href="/politica-calidad">
+            Ver Política de Calidad
+            <span class="material-symbols-outlined" style="font-size: 16px; font-variation-settings: 'FILL' 0;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function() {
+  if (typeof window.dvInitReveals === 'function') {
+    window.dvInitReveals();
+  }
+})();
+</script>

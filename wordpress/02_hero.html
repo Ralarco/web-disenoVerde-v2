@@ -1,0 +1,376 @@
+<!-- ============================================
+     DISEÑO VERDE - HERO SECTION
+     Pegar en módulo HTML de Elementor
+     ============================================ -->
+
+<style>
+/* === SPLASH SCREEN === */
+.dv-splash-screen {
+  position: fixed !important;
+  inset: 0 !important;
+  background-color: #ffffff !important;
+  z-index: 99999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: opacity 0.5s ease, visibility 0.5s ease !important;
+}
+
+.dv-splash-logo {
+  width: 120px !important;
+  height: 120px !important;
+  max-width: 120px !important;
+  max-height: 120px !important;
+  object-fit: contain !important;
+  transform: scale(0.5) rotate(-10deg) !important;
+  opacity: 0 !important;
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1), opacity 1s ease !important;
+}
+
+/* === HERO SECTION === */
+.dv-hero {
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  background-color: var(--dv-color-dark, #1a2e1a) !important;
+  overflow: hidden !important;
+}
+
+.dv-hero-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+}
+
+.dv-hero-bg video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.dv-hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background:
+    radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.45) 100%),
+    rgba(26, 46, 26, 0.40) !important;
+  mix-blend-mode: normal !important;
+  z-index: 1 !important;
+}
+
+.dv-hero-content-wrapper {
+  position: relative !important;
+  z-index: 10 !important;
+  width: 100% !important;
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+@media (min-width: 768px) {
+  .dv-hero-content-wrapper {
+    padding: 0 80px !important;
+  }
+}
+
+.dv-hero-content {
+  max-width: 800px !important;
+  padding: 0 2rem !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.dv-hero-badge {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  color: var(--dv-color-white, #fff) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+  border: none !important;
+  display: inline-block !important;
+  margin-bottom: 1.5rem !important;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.dv-hero-title {
+  color: var(--dv-color-white, #fff) !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 88px !important;
+  font-weight: 300 !important;
+  line-height: 1.05 !important;
+  text-transform: none !important;
+  margin-bottom: 1.5rem !important;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+@media (max-width: 768px) {
+  .dv-hero-title {
+    font-size: 52px !important;
+  }
+}
+
+.dv-hero-subtitle {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  line-height: 1.75 !important;
+  max-width: 600px !important;
+  margin-bottom: 2rem !important;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.dv-hero-cta-wrapper {
+  padding-top: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.dv-hero-cta {
+  background-color: var(--dv-color-accent, #c8a96e) !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+  border: none !important;
+  border-radius: 999px !important;
+  padding: 14px 36px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+}
+
+.dv-hero-cta:hover {
+  transform: scale(1.03) !important;
+  background-color: var(--dv-color-white, #fff) !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+}
+
+/* Scroll Indicator */
+.dv-scroll-indicator {
+  position: absolute !important;
+  bottom: 2rem !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 10 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.dv-scroll-indicator-line {
+  width: 1px !important;
+  height: 60px !important;
+  background: linear-gradient(to bottom, var(--dv-color-accent, #c8a96e), transparent) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.dv-scroll-indicator-line::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 20px !important;
+  background-color: var(--dv-color-white, #fff) !important;
+  animation: dv-up-down 2s infinite ease-in-out !important;
+}
+
+@keyframes dv-up-down {
+  0% { transform: translateY(-20px); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(60px); opacity: 0; }
+}
+
+/* Particles container */
+.dv-particles {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+}
+</style>
+
+<!-- CDN tsParticles -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<div class="dv-wrapper">
+  <!-- Splash Screen -->
+  <div id="dv-splash-screen" class="dv-splash-screen">
+    <!-- ACTUALIZAR: Cambiar src por la URL de tu hoja.svg en WordPress -->
+    <img id="dv-splash-logo" class="dv-splash-logo" src="./images/hoja.svg" alt="Logo Animado">
+  </div>
+
+  <!-- Hero Section -->
+  <section class="dv-hero" id="inicio">
+    <div class="dv-hero-bg">
+      <!-- ACTUALIZAR: Cambiar src por la URL de tu video en WordPress -->
+      <video id="dv-hero-video" autoplay loop muted playsinline>
+        <source src="./video/hero_video.mp4" type="video/mp4">
+      </video>
+      <div class="dv-hero-overlay"></div>
+      <div id="dv-tsparticles" class="dv-particles"></div>
+    </div>
+    <div class="dv-hero-content-wrapper">
+      <div class="dv-hero-content">
+        <span class="dv-hero-element dv-hero-badge">
+          Procesos sostenibles
+        </span>
+        <h1 class="dv-hero-element dv-hero-title" style="line-height: 1.05;">
+          Ingeniería ambiental<div>y paisajismo</div>
+        </h1>
+        <p class="dv-hero-element dv-hero-subtitle">
+          Conservación integral de áreas verdes con excelencia sostenible
+        </p>
+        <div class="dv-hero-element dv-hero-cta-wrapper">
+          <a class="dv-hero-cta" href="#contacto">
+            Presupuesto&nbsp;<span class="material-symbols-outlined" style="margin-left: 8px; font-variation-settings: 'FILL' 0;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Scroll Indicator -->
+    <div class="dv-scroll-indicator">
+      <div class="dv-scroll-indicator-line"></div>
+    </div>
+  </section>
+
+  <!-- Divider: Hero -> Servicios -->
+  <div class="dv-section-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f5f0e8"/>
+    </svg>
+  </div>
+</div>
+
+<script>
+(function() {
+  var splashScreen = document.getElementById('dv-splash-screen');
+  var splashLogo = document.getElementById('dv-splash-logo');
+  var heroElements = document.querySelectorAll('.dv-hero-element');
+
+  // Animación del splash logo
+  setTimeout(function() {
+    if (splashLogo) {
+      splashLogo.style.setProperty('transform', 'scale(1) rotate(0deg)', 'important');
+      splashLogo.style.setProperty('opacity', '1', 'important');
+    }
+  }, 100);
+
+  // Ocultar splash y revelar hero
+  setTimeout(function() {
+    if (splashScreen) {
+      splashScreen.style.setProperty('opacity', '0', 'important');
+      splashScreen.style.setProperty('visibility', 'hidden', 'important');
+    }
+
+    setTimeout(function() {
+      if (splashScreen) {
+        splashScreen.style.display = 'none';
+      }
+
+      // Staggered fade-in de elementos del Hero
+      heroElements.forEach(function(el, index) {
+        setTimeout(function() {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, 300 + (index * 200));
+      });
+    }, 500);
+  }, 1500);
+
+  // --- TSPARTICLES: HOJAS DORADAS Y BLANCAS ---
+  function initDvParticles() {
+    if (typeof tsParticles === 'undefined') {
+      // Reintentar si tsParticles aún no cargó
+      setTimeout(initDvParticles, 200);
+      return;
+    }
+
+    tsParticles.load('dv-tsparticles', {
+      fullScreen: { enable: false },
+      particles: {
+        number: { value: 0 },
+        color: { value: ['#c7d580', '#ffffff'] },
+        shape: {
+          type: 'image',
+          options: {
+            image: {
+              src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyOCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjI4Ij4KICA8cGF0aCBkPSJNMTAgMEM2IDYgMiAxMiAyIDE4YzAgNCAzLjUgOCA4IDEwIDQuNS0yIDgtNiA4LTEwQzE4IDEyIDE0IDYgMTAgMHoiIGZpbGw9IiNmZmZmZmYiLz4KICA8cGF0aCBkPSJNMTAgOHYxOE03IDE0bDMtM00xMyAxOGwtMy0zIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMC44IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjUiLz4KPC9zdmc+",
+              width: 20,
+              height: 28,
+              replaceColor: true
+            }
+          }
+        },
+        opacity: { value: { min: 0.3, max: 0.7 } },
+        size: { value: { min: 6, max: 14 } },
+        rotate: {
+          value: { min: 0, max: 360 },
+          animation: { enable: true, speed: 8, sync: false }
+        },
+        move: { enable: true, speed: 1.5, outModes: 'destroy' },
+        life: {
+          count: 1,
+          duration: { value: 1.2 }
+        }
+      },
+      interactivity: {
+        events: {
+          onHover: { enable: false }
+        }
+      },
+      detectRetina: true
+    }).then(function(container) {
+      if (!container) return;
+
+      var lastEmitTime = 0;
+      var emitInterval = 45;
+      var heroSection = document.getElementById('inicio');
+
+      if (heroSection) {
+        heroSection.addEventListener('mousemove', function(event) {
+          var now = Date.now();
+          if (now - lastEmitTime > emitInterval) {
+            lastEmitTime = now;
+            var rect = heroSection.getBoundingClientRect();
+            var pxRatio = container.retina.pixelRatio || 1;
+            
+            // Multiplicamos por pxRatio para alinear con el canvas en pantallas grandes/retina
+            var x = (event.clientX - rect.left) * pxRatio;
+            var y = (event.clientY - rect.top) * pxRatio;
+
+            for (var i = 0; i < 2; i++) {
+              container.particles.addParticle({ x: x, y: y });
+            }
+          }
+        });
+      }
+    });
+  }
+
+  initDvParticles();
+})();
+</script>

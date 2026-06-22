@@ -1,0 +1,319 @@
+<!-- ============================================
+     DISEÑO VERDE - FOOTER
+     Pegar en módulo HTML de Elementor
+     ============================================ -->
+
+<style>
+/* === FOOTER === */
+.dv-footer {
+  position: relative !important;
+  color: var(--dv-color-white, #fff) !important;
+  border: none !important;
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+/* Background image layer */
+.dv-footer-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+}
+
+.dv-footer-bg img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center bottom !important;
+  display: block !important;
+}
+
+/* Dark overlay — funde con el color de fondo en la parte superior */
+.dv-footer-bg::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 46, 26, 1) 0%,
+    rgba(26, 46, 26, 0.92) 25%,
+    rgba(26, 46, 26, 0.78) 55%,
+    rgba(26, 46, 26, 0.88) 100%
+  ) !important;
+}
+
+/* Main content area */
+.dv-footer-content {
+  position: relative !important;
+  z-index: 1 !important;
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+  padding: 80px 20px 60px !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 3rem !important;
+}
+
+@media (min-width: 768px) {
+  .dv-footer-content {
+    padding: 80px 80px 60px !important;
+    grid-template-columns: 1.4fr 1fr 1.2fr auto !important;
+    gap: 2rem !important;
+  }
+}
+
+/* Brand column */
+.dv-footer-brand {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.dv-footer-logo {
+  height: 3rem !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.dv-footer-tagline {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  line-height: 1.8 !important;
+  max-width: 260px !important;
+}
+
+/* Column headings */
+.dv-footer-heading {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  color: var(--dv-color-accent, #c7d580) !important;
+  margin-bottom: 1.5rem !important;
+  display: block !important;
+}
+
+/* Links column */
+.dv-footer-links {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.dv-footer-links a {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  text-decoration: none !important;
+  transition: color 250ms ease, padding-left 250ms ease !important;
+  display: block !important;
+}
+
+.dv-footer-links a:hover {
+  color: var(--dv-color-white, #fff) !important;
+  padding-left: 4px !important;
+}
+
+/* Contact items */
+.dv-footer-contact-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.dv-footer-contact-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  line-height: 1.5 !important;
+}
+
+.dv-footer-contact-item .material-symbols-outlined {
+  font-size: 20px !important;
+  color: var(--dv-color-accent, #c7d580) !important;
+  flex-shrink: 0 !important;
+  margin-top: 1px !important;
+}
+
+.dv-footer-contact-item a {
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-decoration: none !important;
+  transition: color 250ms ease !important;
+}
+
+.dv-footer-contact-item a:hover {
+  color: var(--dv-color-white, #fff) !important;
+}
+
+/* Social icons */
+.dv-footer-social {
+  display: flex !important;
+  gap: 12px !important;
+}
+
+.dv-footer-social a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: var(--dv-color-white, #fff) !important;
+  text-decoration: none !important;
+  transition: all 300ms ease !important;
+}
+
+.dv-footer-social a:hover {
+  background-color: var(--dv-color-accent, #c7d580) !important;
+  border-color: var(--dv-color-accent, #c7d580) !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+  transform: translateY(-3px) !important;
+}
+
+.dv-footer-social a svg {
+  width: 18px !important;
+  height: 18px !important;
+  fill: currentColor !important;
+}
+
+/* Bottom bar */
+.dv-footer-bottom {
+  position: relative !important;
+  z-index: 1 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+  padding: 24px 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+@media (min-width: 768px) {
+  .dv-footer-bottom {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    padding: 24px 80px !important;
+  }
+}
+
+.dv-footer-copyright {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 300 !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.dv-footer-legal {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.dv-footer-legal a {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  text-decoration: none !important;
+  transition: color 250ms ease !important;
+}
+
+.dv-footer-legal a:hover {
+  color: var(--dv-color-accent, #c7d580) !important;
+}
+
+.dv-footer-legal-sep {
+  color: rgba(255, 255, 255, 0.25) !important;
+  font-size: 13px !important;
+}
+</style>
+
+<div class="dv-wrapper">
+  <footer class="dv-footer">
+    <!-- Background image -->
+    <div class="dv-footer-bg">
+      <!-- ACTUALIZAR: Cambiar src por la URL de tu imagen de fondo en WordPress -->
+      <img alt="" src="./images/footer_park_bg.png">
+    </div>
+
+    <!-- Main footer content -->
+    <div class="dv-footer-content">
+      <!-- Brand -->
+      <div class="dv-footer-brand">
+        <img alt="Diseño Verde Logo" class="dv-footer-logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqdwompwL-FwXNHa1d9MJeTEk9L6nIdF28-hhPohinnRnrUw832rQjKPfrfy6O0mm3IS88pKm0EUCVSHfdtoNNcYsoJG8FDcP1qgW97fUwrita8LzmFIvM36dHbIi8sIznI5ksbNiaFjfIFFjm89nBwJOBs-FcntGV4i5Mj4m0YTsUEqkQHGGiTWcwlsfwyARoDg_B_FkTErl5L8QHOJcCTlHDopcdSbrP8-SK6_4OVRJHcl3ugPhR-aeCJt6PDs9iWOPyeDNJ9x0">
+        <p class="dv-footer-tagline">
+          Creamos espacios verdes que inspiran bienestar, armonía y conexión con la naturaleza.
+        </p>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <span class="dv-footer-heading">Servicios</span>
+        <div class="dv-footer-links">
+          <a href="#servicios">Diseño de Jardines</a>
+          <a href="#servicios">Mantención de Áreas Verdes</a>
+          <a href="#servicios">Sistemas de Riego</a>
+          <a href="#servicios">Paisajismo Residencial</a>
+          <a href="#servicios">Paisajismo Corporativo</a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <span class="dv-footer-heading">Contacto</span>
+        <div class="dv-footer-contact-list">
+          <div class="dv-footer-contact-item">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">location_on</span>
+            <span>Santiago, Chile</span>
+          </div>
+          <div class="dv-footer-contact-item">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">call</span>
+            <a href="tel:+56912345678">+56 9 1234 5678</a>
+          </div>
+          <div class="dv-footer-contact-item">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">mail</span>
+            <a href="mailto:contacto@disenoverde.cl">contacto@disenoverde.cl</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <span class="dv-footer-heading">Síguenos</span>
+        <div class="dv-footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.52 1.49-3.93 3.78-3.93 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="dv-footer-bottom">
+      <span class="dv-footer-copyright">© 2026 Diseño Verde. Todos los derechos reservados.</span>
+      <div class="dv-footer-legal">
+        <a href="#">Política de Privacidad</a>
+        <span class="dv-footer-legal-sep">|</span>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+    </div>
+  </footer>
+</div>

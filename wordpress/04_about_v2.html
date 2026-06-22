@@ -1,0 +1,316 @@
+<!-- ============================================
+     DISEÑO VERDE - SECCIÓN MISIÓN (Alternativa About)
+     Pegar en módulo HTML de Elementor
+     ============================================ -->
+
+<style>
+/* === MISSION SECTION === */
+.dv-mission-section {
+  position: relative !important;
+  background-color: var(--dv-color-dark, #1a2e1a) !important;
+  color: var(--dv-color-white, #fff) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Background image */
+.dv-mission-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+}
+
+.dv-mission-bg img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+}
+
+.dv-mission-bg::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 46, 26, 1) 0%,
+    rgba(26, 46, 26, 0.88) 20%,
+    rgba(26, 46, 26, 0.82) 50%,
+    rgba(26, 46, 26, 0.75) 80%,
+    rgba(26, 46, 26, 0.88) 100%
+  ) !important;
+}
+
+/* Content wrapper */
+.dv-mission-content {
+  position: relative !important;
+  z-index: 1 !important;
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+  padding: 80px 20px !important;
+}
+
+@media (min-width: 768px) {
+  .dv-mission-content {
+    padding: 100px 80px !important;
+  }
+}
+
+/* Header area */
+.dv-mission-header {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem !important;
+  margin-bottom: 4rem !important;
+}
+
+@media (min-width: 1024px) {
+  .dv-mission-header {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+  }
+}
+
+.dv-mission-title {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  color: var(--dv-color-white, #fff) !important;
+  max-width: 560px !important;
+}
+
+@media (min-width: 768px) {
+  .dv-mission-title {
+    font-size: 40px !important;
+  }
+}
+
+.dv-mission-title em {
+  font-style: normal !important;
+  background: linear-gradient(135deg, var(--dv-color-accent, #c7d580), #a8d060) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.dv-mission-subtitle {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 1.75 !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  max-width: 520px !important;
+}
+
+.dv-mission-subtitle strong {
+  color: var(--dv-color-white, #fff) !important;
+  font-weight: 500 !important;
+}
+
+/* Logo in header */
+.dv-mission-logo {
+  height: 2.5rem !important;
+  width: auto !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+}
+
+@media (max-width: 1023px) {
+  .dv-mission-logo {
+    display: none !important;
+  }
+}
+
+/* Cards grid */
+.dv-mission-cards {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 2rem !important;
+}
+
+@media (min-width: 640px) {
+  .dv-mission-cards {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dv-mission-cards {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* Individual card */
+.dv-mission-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 0 !important;
+}
+
+/* Icon circle */
+.dv-mission-icon {
+  width: 72px !important;
+  height: 72px !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(255, 255, 255, 0.35) !important;
+  background-color: rgba(26, 46, 26, 0.7) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  transition: all 400ms ease !important;
+}
+
+.dv-mission-card:hover .dv-mission-icon {
+  border-color: var(--dv-color-accent, #c7d580) !important;
+  background-color: rgba(45, 74, 45, 0.85) !important;
+  transform: scale(1.08) !important;
+}
+
+.dv-mission-icon .material-symbols-outlined {
+  font-size: 30px !important;
+  color: var(--dv-color-white, #fff) !important;
+  font-variation-settings: 'FILL' 0, 'wght' 300 !important;
+}
+
+/* Connector line */
+.dv-mission-connector {
+  width: 2px !important;
+  height: 40px !important;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.08)) !important;
+  margin: 0 auto !important;
+}
+
+/* Card text area */
+.dv-mission-card-text {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  padding: 1.5rem 1.25rem !important;
+  flex: 1 !important;
+  transition: all 300ms ease !important;
+}
+
+.dv-mission-card:hover .dv-mission-card-text {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(199, 213, 128, 0.2) !important;
+}
+
+.dv-mission-card-title {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--dv-color-white, #fff) !important;
+  margin-bottom: 10px !important;
+  line-height: 1.35 !important;
+}
+
+.dv-mission-card-desc {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 300 !important;
+  line-height: 1.7 !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+</style>
+
+<div class="dv-wrapper">
+  <section class="dv-mission-section" id="mision">
+    <!-- Background -->
+    <div class="dv-mission-bg">
+      <!-- ACTUALIZAR: Cambiar src por la URL de tu imagen en WordPress -->
+      <img alt="" src="./images/about_mission_bg.png">
+    </div>
+
+    <div class="dv-mission-content">
+      <!-- Header -->
+      <div class="dv-mission-header dv-reveal-up">
+        <div>
+          <h2 class="dv-mission-title">
+            Llevamos nuestra misión a cada espacio que necesita <em>volver a respirar</em>
+          </h2>
+          <p class="dv-mission-subtitle" style="margin-top: 1.5rem;">
+            Desde pequeños jardines hasta grandes parques metropolitanos, impulsamos la <strong>vitalidad de espacios verdes</strong> en múltiples escalas y contextos.
+          </p>
+        </div>
+        <img alt="Diseño Verde" class="dv-mission-logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqdwompwL-FwXNHa1d9MJeTEk9L6nIdF28-hhPohinnRnrUw832rQjKPfrfy6O0mm3IS88pKm0EUCVSHfdtoNNcYsoJG8FDcP1qgW97fUwrita8LzmFIvM36dHbIi8sIznI5ksbNiaFjfIFFjm89nBwJOBs-FcntGV4i5Mj4m0YTsUEqkQHGGiTWcwlsfwyARoDg_B_FkTErl5L8QHOJcCTlHDopcdSbrP8-SK6_4OVRJHcl3ugPhR-aeCJt6PDs9iWOPyeDNJ9x0">
+      </div>
+
+      <!-- Cards -->
+      <div class="dv-mission-cards">
+        <!-- Card 1 -->
+        <div class="dv-mission-card dv-reveal-up" style="--delay: 0ms;">
+          <div class="dv-mission-icon">
+            <span class="material-symbols-outlined">park</span>
+          </div>
+          <div class="dv-mission-connector"></div>
+          <div class="dv-mission-card-text">
+            <h3 class="dv-mission-card-title">Municipios y parques públicos</h3>
+            <p class="dv-mission-card-desc">Cuidamos áreas verdes que conectan comunidades, elevando su calidad ecológica y su valor social.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="dv-mission-card dv-reveal-up" style="--delay: 150ms;">
+          <div class="dv-mission-icon">
+            <span class="material-symbols-outlined">potted_plant</span>
+          </div>
+          <div class="dv-mission-connector"></div>
+          <div class="dv-mission-card-text">
+            <h3 class="dv-mission-card-title">Parques y jardines privados</h3>
+            <p class="dv-mission-card-desc">Transformamos entornos privados en espacios vivos, eficientes y sostenibles.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="dv-mission-card dv-reveal-up" style="--delay: 300ms;">
+          <div class="dv-mission-icon">
+            <span class="material-symbols-outlined">corporate_fare</span>
+          </div>
+          <div class="dv-mission-connector"></div>
+          <div class="dv-mission-card-text">
+            <h3 class="dv-mission-card-title">Áreas verdes corporativas</h3>
+            <p class="dv-mission-card-desc">Diseñamos y mantenemos ecosistemas que mejoran la experiencia de trabajadores y visitantes.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="dv-mission-card dv-reveal-up" style="--delay: 450ms;">
+          <div class="dv-mission-icon">
+            <span class="material-symbols-outlined">military_tech</span>
+          </div>
+          <div class="dv-mission-connector"></div>
+          <div class="dv-mission-card-text">
+            <h3 class="dv-mission-card-title">Espacios deportivos</h3>
+            <p class="dv-mission-card-desc">Optimizamos superficies verdes para un rendimiento seguro, resistente y de alta calidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: Mission -> Contacto -->
+  <div class="dv-section-divider dv-inverted">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="var(--dv-color-light, #f5f0e8)"/>
+    </svg>
+  </div>
+</div>
+
+<script>
+(function() {
+  if (typeof window.dvInitReveals === 'function') {
+    window.dvInitReveals();
+  }
+})();
+</script>

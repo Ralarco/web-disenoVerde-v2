@@ -1,0 +1,341 @@
+<!-- ============================================
+     DISEÑO VERDE - SECCIÓN CONTACTO
+     Pegar en módulo HTML de Elementor
+     ============================================ -->
+
+<style>
+/* === CONTACT SECTION === */
+.dv-contact-section {
+  background-color: var(--dv-color-light, #f5f0e8) !important;
+  padding: 100px 0 !important;
+}
+
+.dv-contact-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+@media (min-width: 768px) {
+  .dv-contact-grid {
+    padding: 0 !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dv-contact-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+.dv-contact-form-side {
+  background-color: var(--dv-color-dark, #1a2e1a) !important;
+  color: var(--dv-color-white, #fff) !important;
+  padding: 4rem 3rem !important;
+}
+
+@media (max-width: 768px) {
+  .dv-contact-form-side {
+    padding: 3rem 1.5rem !important;
+  }
+}
+
+.dv-contact-form-header {
+  text-align: center !important;
+  margin-bottom: 2.5rem !important;
+}
+
+.dv-contact-form-header h2 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 48px !important;
+  font-weight: 400 !important;
+  color: var(--dv-color-white, #fff) !important;
+  margin-bottom: 16px !important;
+}
+
+.dv-contact-form-header p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 1.75 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.dv-contact-image-side {
+  padding: 0 !important;
+  height: 100% !important;
+  min-height: 450px !important;
+}
+
+.dv-contact-image-side img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
+  display: block !important;
+}
+
+/* Form styles */
+.dv-contact-form {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+
+.dv-form-row {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .dv-form-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+  }
+}
+
+.dv-floating-group {
+  position: relative !important;
+  margin-bottom: 2rem !important;
+}
+
+.dv-floating-input {
+  width: 100% !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+  padding: 12px 0 !important;
+  color: var(--dv-color-white, #fff) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  transition: border-color 0.3s ease !important;
+  border-radius: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.dv-floating-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: var(--dv-color-accent, #c8a96e) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.dv-floating-label {
+  position: absolute !important;
+  top: 12px !important;
+  left: 0 !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  pointer-events: none !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Compatibilidad con CF7 y inputs anidados */
+.dv-floating-group:focus-within .dv-floating-label,
+.dv-floating-group.dv-has-value .dv-floating-label,
+.dv-floating-input:not(:placeholder-shown) ~ .dv-floating-label {
+  top: -16px !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+.dv-floating-select {
+  width: 100% !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+  padding: 12px 0 !important;
+  color: transparent !important; /* Oculta el texto doble del placeholder nativo o de CF7 */
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 1.5 !important;
+  min-height: 48px !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.3s ease !important;
+  border-radius: 0 !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 8px center !important;
+  background-size: 16px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.dv-floating-select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: var(--dv-color-accent, #c8a96e) !important;
+}
+
+.dv-floating-group.dv-has-value .dv-floating-select {
+  color: var(--dv-color-white, #fff) !important;
+}
+
+.dv-floating-select option {
+  background-color: var(--dv-color-dark, #1a2e1a) !important;
+  color: var(--dv-color-white, #fff) !important;
+}
+
+.dv-floating-group:focus-within .dv-floating-label,
+.dv-floating-group.dv-has-value .dv-floating-label,
+.dv-floating-select.dv-has-value ~ .dv-floating-label {
+  top: -16px !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+.dv-contact-submit-btn {
+  width: 100% !important;
+  background-color: var(--dv-color-accent, #c8a96e) !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+  border: none !important;
+  padding: 16px !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1rem !important;
+  text-transform: uppercase !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  border-radius: 999px !important;
+  margin-top: 0.5rem !important;
+}
+
+.dv-contact-submit-btn:hover {
+  background-color: var(--dv-color-white, #fff) !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+}
+
+textarea.dv-floating-input {
+  resize: none !important;
+}
+
+/* CF7 Mensajes de Validación */
+div.wpcf7 .wpcf7-not-valid-tip {
+  color: #ffb4ab !important;
+  font-size: 12px !important;
+  margin-top: 4px !important;
+  font-family: 'Inter', sans-serif !important;
+}
+div.wpcf7-response-output {
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-family: 'Inter', sans-serif !important;
+  border-color: var(--dv-color-accent, #c8a96e) !important;
+  margin: 1em 0 0 0 !important;
+}
+</style>
+
+<div class="dv-wrapper">
+  <section class="dv-contact-section" id="contacto">
+    <div class="dv-contact-grid">
+      <!-- Form Column -->
+      <div class="dv-contact-form-side dv-reveal-right">
+        <div class="dv-contact-form-header">
+          <h2>Comience su proyecto</h2>
+          <p>Complete el formulario y nos comunicaremos a la brevedad para agendar una visita técnica gratuita.</p>
+        </div>
+        <!-- ============================================
+             INTEGRACIÓN CONTACT FORM 7
+             Reemplaza todo el <div> "dv-contact-form" (hasta su cierre) 
+             con tu shortcode de Contact Form 7:
+             [contact-form-7 id="TU_ID_AQUI" title="Formulario de contacto"]
+             ============================================ -->
+        <div class="dv-contact-form">
+          <div class="dv-form-row">
+            <div class="dv-floating-group dv-reveal-up" style="--delay: 100ms;">
+              <input class="dv-floating-input" placeholder=" " type="text" id="dv-nombre-input" required>
+              <label class="dv-floating-label" for="dv-nombre-input">Nombre completo</label>
+            </div>
+            <div class="dv-floating-group dv-reveal-up" style="--delay: 200ms;">
+              <input class="dv-floating-input" placeholder=" " type="tel" id="dv-telefono-input">
+              <label class="dv-floating-label" for="dv-telefono-input">Teléfono</label>
+            </div>
+          </div>
+          <div class="dv-floating-group dv-reveal-up" style="--delay: 300ms;">
+            <input class="dv-floating-input" placeholder=" " type="email" id="dv-email-input" required>
+            <label class="dv-floating-label" for="dv-email-input">Correo electrónico</label>
+          </div>
+          <div class="dv-floating-group dv-reveal-up" style="--delay: 400ms;">
+            <select class="dv-floating-select" id="dv-servicio-select" required>
+              <option value="" disabled selected hidden></option>
+              <option>Diseño de Jardines</option>
+              <option>Mantenimiento de Áreas Verdes</option>
+              <option>Instalación de Riego</option>
+              <option>Consulta General</option>
+            </select>
+            <label class="dv-floating-label" for="dv-servicio-select">Servicio de interés</label>
+          </div>
+          <div class="dv-floating-group dv-reveal-up" style="--delay: 500ms;">
+            <textarea class="dv-floating-input" placeholder=" " rows="4" id="dv-detalles-textarea"></textarea>
+            <label class="dv-floating-label" for="dv-detalles-textarea">Detalles del proyecto</label>
+          </div>
+          <button class="dv-contact-submit-btn" type="submit">
+            Solicitar Presupuesto
+          </button>
+        </div>
+      </div>
+      <!-- Image Column -->
+      <div class="dv-contact-image-side dv-reveal-left">
+        <!-- ACTUALIZAR: Cambiar src por la URL de tu imagen de contacto en WordPress -->
+        <img alt="Diseñador de paisajes profesional trabajando" src="./images/contact_section_img.jpg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: Contacto -> Footer -->
+  <div class="dv-section-divider dv-inverted">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#1a2e1a"/>
+    </svg>
+  </div>
+</div>
+
+<script>
+(function() {
+  // Floating labels: Soporte mejorado para CF7 e inputs nativos
+  var inputs = document.querySelectorAll('.dv-floating-input, .dv-floating-select');
+  inputs.forEach(function(input) {
+    var checkValue = function() {
+      var group = input.closest('.dv-floating-group');
+      if (!group) return;
+      if (input.value && input.value.trim() !== '') {
+        group.classList.add('dv-has-value');
+      } else {
+        group.classList.remove('dv-has-value');
+      }
+    };
+    input.addEventListener('input', checkValue);
+    input.addEventListener('change', checkValue);
+    // Timeout para autocompletado del navegador o CF7
+    setTimeout(checkValue, 150);
+  });
+
+  if (typeof window.dvInitReveals === 'function') {
+    window.dvInitReveals();
+  }
+})();
+</script>

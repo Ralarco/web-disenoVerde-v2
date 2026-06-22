@@ -1,0 +1,933 @@
+<!-- ============================================
+     DISEÑO VERDE - POLÍTICA DE CALIDAD INTEGRADA
+     Pegar en módulo HTML de Elementor
+     (Página independiente: /politica-calidad)
+     ============================================ -->
+
+<style>
+/* === ICON FONT (autocontenido) === */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === POLÍTICA DE CALIDAD - PAGE STYLES === */
+
+/* --- Hero Banner --- */
+.dv-policy-hero {
+  background-color: var(--dv-color-dark, #1a2e1a) !important;
+  color: var(--dv-color-white, #fff) !important;
+  padding: 160px 0 100px !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.dv-policy-hero::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -120px !important;
+  right: -120px !important;
+  width: 400px !important;
+  height: 400px !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, rgba(200, 169, 110, 0.08) 0%, transparent 70%) !important;
+  pointer-events: none !important;
+}
+
+.dv-policy-hero::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -80px !important;
+  left: -80px !important;
+  width: 300px !important;
+  height: 300px !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, rgba(200, 169, 110, 0.06) 0%, transparent 70%) !important;
+  pointer-events: none !important;
+}
+
+.dv-policy-hero-inner {
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+@media (min-width: 768px) {
+  .dv-policy-hero-inner {
+    padding: 0 80px !important;
+  }
+}
+
+.dv-policy-hero-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background-color: rgba(200, 169, 110, 0.12) !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  padding: 10px 20px !important;
+  border-radius: 999px !important;
+  margin-bottom: 2rem !important;
+}
+
+.dv-policy-hero-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 56px !important;
+  font-weight: 300 !important;
+  line-height: 1.1 !important;
+  color: var(--dv-color-white, #fff) !important;
+  margin-bottom: 1.5rem !important;
+}
+
+@media (max-width: 768px) {
+  .dv-policy-hero-title {
+    font-size: 36px !important;
+  }
+}
+
+.dv-policy-hero-subtitle {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  line-height: 1.75 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  max-width: 700px !important;
+  margin: 0 auto !important;
+}
+
+.dv-policy-hero-meta {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 2rem !important;
+  margin-top: 2.5rem !important;
+  flex-wrap: wrap !important;
+}
+
+.dv-policy-hero-meta-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.dv-policy-hero-meta-item .material-symbols-outlined {
+  font-size: 18px !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+}
+
+/* --- Introduction Card --- */
+.dv-policy-intro-section {
+  background-color: var(--dv-color-light, #f5f0e8) !important;
+  padding: 100px 0 !important;
+}
+
+.dv-policy-intro-inner {
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+@media (min-width: 768px) {
+  .dv-policy-intro-inner {
+    padding: 0 80px !important;
+  }
+}
+
+.dv-policy-intro-card {
+  background-color: var(--dv-color-white, #fff) !important;
+  border: 1px solid rgba(26, 46, 26, 0.08) !important;
+  border-radius: 24px !important;
+  padding: 3rem 2.5rem !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.dv-policy-intro-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 4px !important;
+  height: 100% !important;
+  background: linear-gradient(to bottom, var(--dv-color-accent, #c8a96e), var(--dv-color-mid, #2d4a2d)) !important;
+  border-radius: 4px 0 0 4px !important;
+}
+
+@media (min-width: 768px) {
+  .dv-policy-intro-card {
+    padding: 4rem 4rem 4rem 4.5rem !important;
+  }
+}
+
+.dv-policy-intro-icon {
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  background-color: rgba(200, 169, 110, 0.1) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.dv-policy-intro-icon .material-symbols-outlined {
+  font-size: 28px !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+}
+
+.dv-policy-intro-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 300 !important;
+  line-height: 1.85 !important;
+  color: var(--dv-color-text-dark, #1a2e1a) !important;
+}
+
+.dv-policy-intro-text strong {
+  font-weight: 600 !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+}
+
+/* --- Commitment Sections (Cards Grid) --- */
+.dv-policy-commitments-section {
+  background-color: var(--dv-color-light, #f5f0e8) !important;
+  padding: 0 0 100px !important;
+}
+
+.dv-policy-commitments-inner {
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+@media (min-width: 768px) {
+  .dv-policy-commitments-inner {
+    padding: 0 80px !important;
+  }
+}
+
+/* Individual commitment block */
+.dv-policy-block {
+  margin-bottom: 3rem !important;
+}
+
+.dv-policy-block:last-child {
+  margin-bottom: 0 !important;
+}
+
+.dv-policy-block-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.dv-policy-block-number {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+.dv-policy-block-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+}
+
+.dv-policy-block-desc {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 1.75 !important;
+  color: var(--dv-color-text-muted, #6b7c6b) !important;
+  margin-bottom: 1.5rem !important;
+  max-width: 800px !important;
+}
+
+/* Commitment cards grid */
+.dv-policy-cards-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 16px !important;
+}
+
+@media (min-width: 768px) {
+  .dv-policy-cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dv-policy-cards-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+.dv-policy-card {
+  background-color: var(--dv-color-white, #fff) !important;
+  border: 1px solid rgba(26, 46, 26, 0.08) !important;
+  border-radius: 24px !important;
+  padding: 2rem !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
+  transition: all 300ms ease !important;
+}
+
+.dv-policy-card:hover {
+  background-color: var(--dv-color-dark, #1a2e1a) !important;
+  border-color: transparent !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-4px) !important;
+}
+
+.dv-policy-card-icon {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  border-radius: 50% !important;
+  background-color: var(--dv-color-light, #f5f0e8) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background-color 300ms ease !important;
+}
+
+.dv-policy-card-icon .material-symbols-outlined {
+  font-size: 20px !important;
+  color: var(--dv-color-mid, #2d4a2d) !important;
+  transition: color 300ms ease !important;
+}
+
+.dv-policy-card:hover .dv-policy-card-icon {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dv-policy-card:hover .dv-policy-card-icon .material-symbols-outlined {
+  color: var(--dv-color-accent, #c8a96e) !important;
+}
+
+.dv-policy-card-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 300 !important;
+  line-height: 1.65 !important;
+  color: var(--dv-color-text-dark, #1a2e1a) !important;
+  transition: color 300ms ease !important;
+}
+
+.dv-policy-card:hover .dv-policy-card-text {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* --- Dark Accent Section (Gestión Energía / Mejora Continua) --- */
+.dv-policy-dark-section {
+  background-color: var(--dv-color-dark, #1a2e1a) !important;
+  color: var(--dv-color-white, #fff) !important;
+  padding: 100px 0 !important;
+}
+
+.dv-policy-dark-inner {
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+@media (min-width: 768px) {
+  .dv-policy-dark-inner {
+    padding: 0 80px !important;
+  }
+}
+
+.dv-policy-dark-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 3rem !important;
+}
+
+@media (min-width: 1024px) {
+  .dv-policy-dark-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 4rem !important;
+  }
+}
+
+.dv-policy-dark-block-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.dv-policy-dark-block-number {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  border-radius: 50% !important;
+  background-color: rgba(200, 169, 110, 0.15) !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+.dv-policy-dark-block-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  color: var(--dv-color-white, #fff) !important;
+}
+
+.dv-policy-dark-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.dv-policy-dark-list li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 300 !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.dv-policy-dark-list li::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 6px !important;
+  height: 6px !important;
+  min-width: 6px !important;
+  border-radius: 50% !important;
+  background-color: var(--dv-color-accent, #c8a96e) !important;
+  margin-top: 8px !important;
+}
+
+/* --- Communication Section --- */
+.dv-policy-comm-section {
+  background-color: var(--dv-color-light, #f5f0e8) !important;
+  padding: 100px 0 !important;
+}
+
+.dv-policy-comm-inner {
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+@media (min-width: 768px) {
+  .dv-policy-comm-inner {
+    padding: 0 80px !important;
+  }
+}
+
+.dv-policy-comm-card {
+  background-color: var(--dv-color-white, #fff) !important;
+  border: 1px solid rgba(26, 46, 26, 0.08) !important;
+  border-radius: 24px !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+}
+
+.dv-policy-comm-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  padding: 2.5rem 2.5rem 0 2.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .dv-policy-comm-header {
+    padding: 3rem 3rem 0 3rem !important;
+  }
+}
+
+.dv-policy-comm-number {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  border-radius: 50% !important;
+  background-color: var(--dv-color-light, #f5f0e8) !important;
+  color: var(--dv-color-mid, #2d4a2d) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+.dv-policy-comm-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+}
+
+.dv-policy-comm-body {
+  padding: 1.5rem 2.5rem 2.5rem 2.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .dv-policy-comm-body {
+    padding: 1.5rem 3rem 3rem 3rem !important;
+  }
+}
+
+.dv-policy-comm-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 2rem 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.dv-policy-comm-list li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 300 !important;
+  line-height: 1.65 !important;
+  color: var(--dv-color-text-muted, #6b7c6b) !important;
+}
+
+.dv-policy-comm-list li .material-symbols-outlined {
+  font-size: 20px !important;
+  color: var(--dv-color-mid, #2d4a2d) !important;
+  margin-top: 2px !important;
+}
+
+/* Signature */
+.dv-policy-signature {
+  border-top: 1px solid rgba(26, 46, 26, 0.08) !important;
+  padding-top: 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+.dv-policy-signature-avatar {
+  width: 56px !important;
+  height: 56px !important;
+  min-width: 56px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, var(--dv-color-dark, #1a2e1a), var(--dv-color-mid, #2d4a2d)) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--dv-color-white, #fff) !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+}
+
+.dv-policy-signature-name {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+}
+
+.dv-policy-signature-role {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 300 !important;
+  color: var(--dv-color-text-muted, #6b7c6b) !important;
+  margin-top: 2px !important;
+}
+
+/* --- Normas (ISO badges) --- */
+.dv-policy-norms {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+  padding: 60px 20px !important;
+  background-color: var(--dv-color-light, #f5f0e8) !important;
+}
+
+.dv-policy-norm-badge {
+  background-color: var(--dv-color-white, #fff) !important;
+  border: 1px solid rgba(26, 46, 26, 0.08) !important;
+  border-radius: 999px !important;
+  padding: 12px 24px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 300ms ease !important;
+}
+
+.dv-policy-norm-badge:hover {
+  background-color: var(--dv-color-dark, #1a2e1a) !important;
+  color: var(--dv-color-white, #fff) !important;
+  border-color: transparent !important;
+}
+
+.dv-policy-norm-badge .material-symbols-outlined {
+  font-size: 18px !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+}
+
+/* --- Back to Home button --- */
+.dv-policy-back {
+  display: flex !important;
+  justify-content: center !important;
+  padding: 0 20px 60px !important;
+  background-color: var(--dv-color-light, #f5f0e8) !important;
+}
+
+.dv-policy-back-btn {
+  border: 1px solid var(--dv-color-mid, #2d4a2d) !important;
+  color: var(--dv-color-mid, #2d4a2d) !important;
+  background-color: transparent !important;
+  padding: 12px 32px !important;
+  border-radius: 999px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 300ms ease !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+.dv-policy-back-btn:hover {
+  background-color: var(--dv-color-dark, #1a2e1a) !important;
+  border-color: var(--dv-color-dark, #1a2e1a) !important;
+  color: var(--dv-color-white, #fff) !important;
+}
+</style>
+
+<div class="dv-wrapper">
+
+  <!-- ========== HERO BANNER ========== -->
+  <section class="dv-policy-hero" id="politica-calidad">
+    <div class="dv-policy-hero-inner">
+      <div class="dv-reveal-up">
+        <span class="dv-policy-hero-badge">
+          <span class="material-symbols-outlined" style="font-size: 16px; font-variation-settings: 'FILL' 0;">verified</span>
+          Sistema de Gestión Integrado
+        </span>
+      </div>
+      <h1 class="dv-policy-hero-title dv-reveal-up" style="--delay: 100ms;">
+        Política de Calidad<br>Integrada
+      </h1>
+      <p class="dv-policy-hero-subtitle dv-reveal-up" style="--delay: 200ms;">
+        Nuestro compromiso con la calidad del servicio, la protección del medio ambiente, la eficiencia energética y la mejora continua.
+      </p>
+      <div class="dv-policy-hero-meta dv-reveal-up" style="--delay: 300ms;">
+        <span class="dv-policy-hero-meta-item">
+          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">description</span>
+          SGI.DV.POL.CA.01 · V1
+        </span>
+        <span class="dv-policy-hero-meta-item">
+          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">apartment</span>
+          Diseño Verde SpA
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: Hero -> Intro -->
+  <div class="dv-section-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f5f0e8"/>
+    </svg>
+  </div>
+
+  <!-- ========== INTRODUCCIÓN ========== -->
+  <section class="dv-policy-intro-section">
+    <div class="dv-policy-intro-inner">
+      <div class="dv-policy-intro-card dv-reveal-up">
+        <div class="dv-policy-intro-icon">
+          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">eco</span>
+        </div>
+        <p class="dv-policy-intro-text">
+          <strong>Diseño Verde</strong>, empresa dedicada a la mantención de parques, jardines y áreas verdes en Chile, declara mediante la presente Política su compromiso con la <strong>calidad del servicio</strong>, la <strong>protección del medio ambiente</strong>, la <strong>eficiencia energética</strong> y la <strong>mejora continua</strong> de su desempeño organizacional.
+        </p>
+        <p class="dv-policy-intro-text" style="margin-top: 1.5rem;">
+          La Alta Dirección asume el liderazgo y la responsabilidad de implementar, mantener y mejorar continuamente un <strong>Sistema de Gestión Integrado (SGI)</strong> basado en las normas <strong>ISO 9001</strong>, <strong>ISO 14001</strong> e <strong>ISO 50001</strong>, asegurando su integración en los procesos estratégicos y operacionales de la organización.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 1. COMPROMISO CON LA CALIDAD ========== -->
+  <section class="dv-policy-commitments-section">
+    <div class="dv-policy-commitments-inner">
+      <div class="dv-policy-block dv-reveal-up">
+        <div class="dv-policy-block-header">
+          <div class="dv-policy-block-number" style="background-color: rgba(45, 74, 45, 0.08); color: var(--dv-color-mid, #2d4a2d);">1</div>
+          <h2 class="dv-policy-block-title">Compromiso con la Calidad</h2>
+        </div>
+        <p class="dv-policy-block-desc">Nos comprometemos a entregar servicios de excelencia, superando las expectativas de nuestros clientes y cumpliendo con los más altos estándares.</p>
+        <div class="dv-policy-cards-grid">
+          <div class="dv-policy-card dv-reveal-up" style="--delay: 0ms;">
+            <div class="dv-policy-card-icon">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">gavel</span>
+            </div>
+            <p class="dv-policy-card-text">Cumplir los requisitos de nuestros clientes, públicos y privados, así como los requisitos legales y reglamentarios aplicables.</p>
+          </div>
+          <div class="dv-policy-card dv-reveal-up" style="--delay: 80ms;">
+            <div class="dv-policy-card-icon">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">engineering</span>
+            </div>
+            <p class="dv-policy-card-text">Asegurar la calidad técnica en los servicios de mantención de áreas verdes y manejo de maquinaria.</p>
+          </div>
+          <div class="dv-policy-card dv-reveal-up" style="--delay: 160ms;">
+            <div class="dv-policy-card-icon">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">trending_up</span>
+            </div>
+            <p class="dv-policy-card-text">Mejorar continuamente nuestros procesos operativos para aumentar la eficiencia, reducir los reprocesos y optimizar los tiempos de respuesta.</p>
+          </div>
+          <div class="dv-policy-card dv-reveal-up" style="--delay: 240ms;">
+            <div class="dv-policy-card-icon">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">school</span>
+            </div>
+            <p class="dv-policy-card-text">Capacitar permanentemente a nuestros trabajadores para fortalecer sus competencias técnicas.</p>
+          </div>
+          <div class="dv-policy-card dv-reveal-up" style="--delay: 320ms;">
+            <div class="dv-policy-card-icon">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">groups</span>
+            </div>
+            <p class="dv-policy-card-text">Promover una cultura organizacional basada en la responsabilidad, la planificación y el trabajo seguro.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== 2. COMPROMISO AMBIENTAL ========== -->
+      <div class="dv-policy-block dv-reveal-up">
+        <div class="dv-policy-block-header">
+          <div class="dv-policy-block-number" style="background-color: rgba(45, 74, 45, 0.08); color: var(--dv-color-mid, #2d4a2d);">2</div>
+          <h2 class="dv-policy-block-title">Compromiso Ambiental</h2>
+        </div>
+        <p class="dv-policy-block-desc">Reconocemos que nuestras actividades generan impactos ambientales asociados principalmente al consumo de agua, uso de combustibles fósiles, generación de residuos vegetales y emisiones atmosféricas.</p>
+        <div class="dv-policy-cards-grid">
+          <div class="dv-policy-card dv-reveal-up" style="--delay: 0ms;">
+            <div class="dv-policy-card-icon">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shield</span>
+            </div>
+            <p class="dv-policy-card-text">Proteger el medio ambiente, incluyendo la prevención de la contaminación.</p>
+          </div>
+          <div class="dv-policy-card dv-reveal-up" style="--delay: 80ms;">
+            <div class="dv-policy-card-icon">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">balance</span>
+            </div>
+            <p class="dv-policy-card-text">Cumplir la legislación ambiental chilena vigente y otros compromisos suscritos por Diseño Verde SpA.</p>
+          </div>
+          <div class="dv-policy-card dv-reveal-up" style="--delay: 160ms;">
+            <div class="dv-policy-card-icon">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">water_drop</span>
+            </div>
+            <p class="dv-policy-card-text">Optimizar el uso del recurso hídrico, promoviendo mejoras progresivas en la eficiencia del riego tradicional.</p>
+          </div>
+          <div class="dv-policy-card dv-reveal-up" style="--delay: 240ms;">
+            <div class="dv-policy-card-icon">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">local_gas_station</span>
+            </div>
+            <p class="dv-policy-card-text">Reducir el consumo de combustibles y las emisiones asociadas a la operación de maquinaria.</p>
+          </div>
+          <div class="dv-policy-card dv-reveal-up" style="--delay: 320ms;">
+            <div class="dv-policy-card-icon">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">recycling</span>
+            </div>
+            <p class="dv-policy-card-text">Gestionar adecuadamente los residuos vegetales y peligrosos, promoviendo la valorización y reciclaje cuando sea técnicamente viable.</p>
+          </div>
+          <div class="dv-policy-card dv-reveal-up" style="--delay: 400ms;">
+            <div class="dv-policy-card-icon">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">spa</span>
+            </div>
+            <p class="dv-policy-card-text">Fomentar prácticas de jardinería sostenible y uso responsable de insumos químicos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: Commitments -> Dark -->
+  <div class="dv-section-divider dv-inverted">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#1a2e1a"/>
+    </svg>
+  </div>
+
+  <!-- ========== 3. GESTIÓN ENERGÍA + 4. MEJORA CONTINUA (Dark) ========== -->
+  <section class="dv-policy-dark-section">
+    <div class="dv-policy-dark-inner">
+      <div class="dv-policy-dark-grid">
+        <!-- Col 1: Gestión de la Energía -->
+        <div class="dv-reveal-left">
+          <div class="dv-policy-dark-block-header">
+            <div class="dv-policy-dark-block-number">3</div>
+            <h2 class="dv-policy-dark-block-title">Gestión de la Energía</h2>
+          </div>
+          <p style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem;">
+            Reconocemos que el consumo energético —principalmente combustibles para herramienta, maquinaria y transporte— constituye uno de nuestros aspectos significativos.
+          </p>
+          <ul class="dv-policy-dark-list">
+            <li>Mejorar continuamente el desempeño energético.</li>
+            <li>Proporcionar información y recursos necesarios para alcanzar objetivos y metas energéticas.</li>
+            <li>Promover la eficiencia en el uso de combustibles mediante mantenimiento preventivo de maquinaria y conducción eficiente.</li>
+            <li>Evaluar progresivamente alternativas tecnológicas más eficientes y de menor impacto energético.</li>
+            <li>Incorporar criterios de eficiencia energética en la adquisición de equipos y servicios.</li>
+          </ul>
+        </div>
+        <!-- Col 2: Mejora Continua -->
+        <div class="dv-reveal-right">
+          <div class="dv-policy-dark-block-header">
+            <div class="dv-policy-dark-block-number">4</div>
+            <h2 class="dv-policy-dark-block-title">Marco para Objetivos y Mejora Continua</h2>
+          </div>
+          <p style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem;">
+            Esta Política proporciona el marco de referencia para establecer y revisar objetivos y metas de calidad, ambientales y energéticas.
+          </p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--dv-color-accent, #c8a96e); margin-bottom: 1rem;">
+            Diseño Verde SpA se compromete a:
+          </p>
+          <ul class="dv-policy-dark-list">
+            <li>Mantener procesos de evaluación de riesgos y oportunidades.</li>
+            <li>Medir indicadores de desempeño.</li>
+            <li>Implementar acciones correctivas cuando corresponda.</li>
+            <li>Revisar anualmente el Sistema de Gestión Integrado.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: Dark -> Comm -->
+  <div class="dv-section-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f5f0e8"/>
+    </svg>
+  </div>
+
+  <!-- ========== 5. COMUNICACIÓN Y APLICACIÓN ========== -->
+  <section class="dv-policy-comm-section">
+    <div class="dv-policy-comm-inner">
+      <div class="dv-policy-comm-card dv-reveal-up">
+        <div class="dv-policy-comm-header">
+          <div class="dv-policy-comm-number">5</div>
+          <h2 class="dv-policy-comm-title">Comunicación y Aplicación</h2>
+        </div>
+        <div class="dv-policy-comm-body">
+          <p style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 300; line-height: 1.75; color: var(--dv-color-text-muted, #6b7c6b); margin-bottom: 1.5rem;">
+            Esta Política:
+          </p>
+          <ul class="dv-policy-comm-list">
+            <li>
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">forum</span>
+              <span>Es comunicada y comprendida por todos los trabajadores.</span>
+            </li>
+            <li>
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">public</span>
+              <span>Está disponible para partes interesadas pertinentes.</span>
+            </li>
+            <li>
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">update</span>
+              <span>Es revisada periódicamente para asegurar su vigencia y adecuación al contexto de la organización.</span>
+            </li>
+          </ul>
+
+          <!-- Firma -->
+          <div class="dv-policy-signature">
+            <div class="dv-policy-signature-avatar">RR</div>
+            <div>
+              <div class="dv-policy-signature-name">Rodrigo Rozas</div>
+              <div class="dv-policy-signature-role">Gerente General · Diseño Verde SpA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ISO BADGES ========== -->
+  <div class="dv-policy-norms dv-reveal-scale">
+    <span class="dv-policy-norm-badge">
+      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">verified</span>
+      ISO 9001 · Calidad
+    </span>
+    <span class="dv-policy-norm-badge">
+      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">eco</span>
+      ISO 14001 · Ambiental
+    </span>
+    <span class="dv-policy-norm-badge">
+      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">bolt</span>
+      ISO 50001 · Energía
+    </span>
+  </div>
+
+  <!-- ========== BACK TO HOME ========== -->
+  <div class="dv-policy-back">
+    <!-- ACTUALIZAR: Cambiar href por la URL de tu página de inicio en WordPress -->
+    <a class="dv-policy-back-btn" href="/">
+      <span class="material-symbols-outlined" style="font-size: 18px; font-variation-settings: 'FILL' 0;">arrow_back</span>
+      Volver al inicio
+    </a>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  if (typeof window.dvInitReveals === 'function') {
+    window.dvInitReveals();
+  }
+})();
+</script>

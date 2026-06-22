@@ -1,0 +1,199 @@
+<!-- ============================================
+     DISEÑO VERDE - SECCIÓN ABOUT (Pasión por el verde)
+     Pegar en módulo HTML de Elementor
+     ============================================ -->
+
+<style>
+/* === ABOUT SECTION === */
+.dv-about-section {
+  background-color: var(--dv-color-dark, #1a2e1a) !important;
+  color: var(--dv-color-white, #fff) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.dv-about-container {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media (min-width: 1024px) {
+  .dv-about-container {
+    flex-direction: row-reverse !important;
+    min-height: 650px !important;
+  }
+
+  .dv-about-image-side {
+    width: 58% !important;
+    height: auto !important;
+    min-height: 650px !important;
+  }
+
+  .dv-about-text-side {
+    width: 42% !important;
+    padding: 6rem 4rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .dv-about-image-side {
+    width: 100% !important;
+    height: 400px !important;
+  }
+  .dv-about-text-side {
+    width: 100% !important;
+    padding: 4rem 2rem !important;
+  }
+}
+
+.dv-about-image-side img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
+}
+
+.dv-about-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 48px !important;
+  font-weight: 400 !important;
+  color: var(--dv-color-white, #fff) !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.dv-about-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 1.75 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Stats */
+.dv-stats-container {
+  display: flex !important;
+  gap: 2rem !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
+}
+
+.dv-stat-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  flex: 1 !important;
+}
+
+.dv-stat-number {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 40px !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+  font-weight: 600 !important;
+  line-height: 1.1 !important;
+}
+
+.dv-stat-divider {
+  width: 100% !important;
+  height: 1px !important;
+  background-color: var(--dv-color-accent, #c8a96e) !important;
+  opacity: 0.3 !important;
+  margin: 8px 0 !important;
+}
+
+.dv-stat-label {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  letter-spacing: 0.08em !important;
+}
+
+.dv-about-btn {
+  border: 1px solid var(--dv-color-accent, #c8a96e) !important;
+  color: var(--dv-color-accent, #c8a96e) !important;
+  background-color: transparent !important;
+  padding: 12px 28px !important;
+  border-radius: 999px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  transition: all 300ms ease !important;
+  align-self: flex-start !important;
+  text-decoration: none !important;
+}
+
+.dv-about-btn:hover {
+  background-color: var(--dv-color-accent, #c8a96e) !important;
+  color: var(--dv-color-dark, #1a2e1a) !important;
+}
+</style>
+
+<div class="dv-wrapper">
+  <section class="dv-about-section" id="galeria">
+    <div class="dv-about-container">
+      <!-- Text Column -->
+      <div class="dv-about-text-side dv-reveal-left">
+        <h2 class="dv-about-title">Pasión por el verde</h2>
+        <p class="dv-about-text">
+          En Diseño Verde, nuestra filosofía nace de la conexión profunda con la naturaleza. Llevamos más de una década transformando espacios vacíos en ecosistemas vivos y vibrantes. Creemos que cada jardín tiene el potencial de ser un santuario personal.
+        </p>
+        <p class="dv-about-text">
+          Nuestro equipo de paisajistas y botánicos trabaja con especies nativas y prácticas sostenibles, asegurando que su diseño no solo sea estéticamente impresionante hoy, sino que prospere y madure bellamente con el paso del tiempo.
+        </p>
+        <!-- Stats -->
+        <div class="dv-stats-container dv-reveal-scale">
+          <div class="dv-stat-item">
+            <span class="dv-stat-number">+10 años</span>
+            <div class="dv-stat-divider"></div>
+            <span class="dv-stat-label">Experiencia</span>
+          </div>
+          <div class="dv-stat-item">
+            <span class="dv-stat-number">500+</span>
+            <div class="dv-stat-divider"></div>
+            <span class="dv-stat-label">Proyectos</span>
+          </div>
+          <div class="dv-stat-item">
+            <span class="dv-stat-number">100%</span>
+            <div class="dv-stat-divider"></div>
+            <span class="dv-stat-label">Sostenible</span>
+          </div>
+        </div>
+        <div>
+          <a class="dv-about-btn" href="#contacto">
+            Ver nuestra historia en imágenes
+            <span class="material-symbols-outlined" style="margin-left: 8px; font-variation-settings: 'FILL' 0;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <!-- Image Column -->
+      <div class="dv-about-image-side dv-reveal-right">
+        <img alt="Manos cuidando una planta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzpe8cHtna-x3wItFwlqg_j_daQbmJbkwzejortxohidxS6i-1VdxQhzeI0e1KEfpsM5phGQNXfeMqT-LKA8JUTVopaUGklXUSiKCQvIRyHbo8cE8F6PMj2x7X-N6uFaeNR4-RuuHrB_R-ZP5-AHU4JfZRmlwzIpwZ14q1KqO_LC9O0QrlraXY94q0NMW0HGfpzU1RFZotHnznwABg14lR4KDxMqHUhPppp4HtN00houLcr0g8ZakDv0il3Q__OvMlGv65yTk0POQ">
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: About -> Contacto -->
+  <div class="dv-section-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f5f0e8"/>
+    </svg>
+  </div>
+</div>
+
+<script>
+(function() {
+  if (typeof window.dvInitReveals === 'function') {
+    window.dvInitReveals();
+  }
+})();
+</script>
